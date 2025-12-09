@@ -18,11 +18,6 @@ export const metadata: Metadata = {
   description: "Descubra os melhores pacotes de viagens, guias de turismo e roteiros personalizados para sua próxima aventura. Planeje sua viagem dos sonhos com a Go Explorer."
 };
 
-
-
-
-
-
 const RootLayout = ({ children, }: Readonly<{ children: React.ReactNode; }>) => {
   return (
     <html lang="pt-BR">
