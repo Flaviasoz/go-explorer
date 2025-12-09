@@ -1,21 +1,21 @@
-import { defineConfig, globalIgnores } from "eslint/config"
-import nextVitals from "eslint-config-next/core-web-vitals"
-import nextTs from "eslint-config-next/typescript"
-import prettier from "eslint-config-prettier/flat"
+import { defineConfig, globalIgnores } from 'eslint/config'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import prettier from 'eslint-config-prettier/flat'
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   prettier,
-  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "error",
-      "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0, maxBOF: 0 }],
-      "no-trailing-spaces": "error",
-      "eol-last": ["error", "always"],
+      '@typescript-eslint/no-explicit-any': 'error',
+      'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+      'no-trailing-spaces': 'error',
+      'eol-last': ['error', 'always'],
       indent: [
-        "error",
+        'error',
         2,
         {
           SwitchCase: 1,
@@ -23,18 +23,18 @@ const eslintConfig = defineConfig([
         }
       ],
       quotes: [
-        "error",
-        "single",
+        'error',
+        'single',
         {
           avoidEscape: true,
           allowTemplateLiterals: true
         }
       ],
-      "no-multi-spaces": "error",
-      "max-len": [
-        "error",
+      'no-multi-spaces': 'error',
+      'max-len': [
+        'error',
         {
-          code: 80,
+          code: 90,
           tabWidth: 2,
           ignoreUrls: true,
           ignoreComments: false,
@@ -42,9 +42,9 @@ const eslintConfig = defineConfig([
           ignoreTemplateLiterals: true
         }
       ],
-      semi: ["error", "never"],
-      "no-extra-semi": "error",
-      "comma-dangle": ["error", "never"]
+      semi: ['error', 'never'],
+      'no-extra-semi': 'error',
+      'comma-dangle': ['error', 'never']
     }
   }
 ])
