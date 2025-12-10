@@ -1,7 +1,10 @@
 import React from 'react'
 import '@/core/css/globals.css'
+import '@mantine/core/styles.css'
+
 import type { Metadata } from 'next'
 import { cn } from '@/core/functions/cn'
+import { MantineProvider } from '@mantine/core'
 import { PageProps } from '@/core/interface/page'
 import { Elms_Sans, Quicksand } from 'next/font/google'
 import { ThemeProvider } from '@/core/providers/theme-provider'
@@ -19,9 +22,11 @@ const RootLayout = ({ children }: Readonly<PageProps>) => {
   return (
     <html lang='pt-BR' suppressHydrationWarning>
       <body className={cn(elmsSans.variable, quicksand.variable, 'antialiased')}>
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          {children}
-        </ThemeProvider>
+        <MantineProvider>
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+            {children}
+          </ThemeProvider>
+        </MantineProvider>
       </body>
     </html>
   )
