@@ -3,8 +3,7 @@
 :root {
   --background: #11182705;
   --foreground: #171717;
-  --font-elms-sans: var(--font-elms-sans);
-  --font-quicksand: var(--font-quicksand);
+  --font-poppins: var(--font-poppins);
 }
 
 .dark {
@@ -15,15 +14,27 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-elms-sans: var(--font-elms-sans);
-  --font-quicksand: var(--font-quicksand);
+  --font-family-poppins: var(--font-poppins);
+
+  /* Cores customizadas do Go Explorer */
+  --color-explorer-coral: #ff6b6b;
+  --color-explorer-peach: #ff8e53;
+  --color-explorer-blush: #ff6b9d;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-elms-sans), var(--font-quicksand), sans-serif;
+  font-family: var(--font-poppins), sans-serif !important;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+[data-mantine-color-scheme] {
+  font-family: var(--font-poppins), sans-serif !important;
 }
